@@ -1,4 +1,5 @@
-import google.generativeai as genai
+# import google.generativeai as genai
+from google import genai
 from typing import List
 from dotenv import load_dotenv
 import os, math
@@ -28,8 +29,9 @@ SITE_NAME = "timviec365.vn"
 
 class GeminiSummarizer:
     def __init__(self, api_key=API_KEY, model_name: str = 'gemini-2.0-flash', site_name: str = "timviec365.vn"):
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel(model_name)
+        # genai.configure(api_key=api_key)
+        self.client = genai.Client(api_key=API_KEY)
+        self.model = model_name
         self.site_name = site_name
         
     def post_process(self, text):
@@ -108,9 +110,10 @@ class GeminiSummarizer:
         prompt = f"Hãy tóm tắt ngắn gọn đoạn văn sau đây còn khoảng 200-250 từ:\n{chunk}"
 
         try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=genai.types.GenerationConfig(
+            response = self.client.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config=genai.types.GenerateContentConfig(
                     max_output_tokens=max_output_tokens,
                     temperature=0.3
                 )
@@ -192,9 +195,10 @@ Format đầu ra: KHÔNG Sử dụng markdown, bullets, chỉ các đoạn văn 
             prompt += f"\nDưới đây là một bài viết mẫu đạt yêu cầu về độ dài và style viết:\n{sample_text}\nHãy tham khảo cách viết và điều chỉnh đoạn văn trên:"
 
         try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=genai.types.GenerationConfig(
+            response = self.client.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config=genai.types.GenerateContentConfig(
                     max_output_tokens=max_output_tokens
                 )
             )
