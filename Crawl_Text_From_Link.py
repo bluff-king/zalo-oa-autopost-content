@@ -5,7 +5,6 @@ import cloudscraper
 from fake_useragent import UserAgent
 from filelock import FileLock
 import requests # Added for image downloading
-from urllib.parse import urlparse # Added for image downloading
 
 # --- Path Configurations ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

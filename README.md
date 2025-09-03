@@ -42,6 +42,7 @@ To set up and run the project, follow these steps:
     Create a file named `key.env` in the project root and add your OpenRouter API key:
     ```
     GEMINI_API_KEY=your_gemini_api_key_here
+    ACCESS_TOKEN=your_zalo_access_token_here
     ```
     Replace `your_gemini_api_key_here` with your actual API key.
 

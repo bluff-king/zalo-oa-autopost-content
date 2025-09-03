@@ -1,6 +1,5 @@
 import os
 import requests
-from urllib.parse import urlparse  # Added import for urlparse
 from Crawl_Text_From_Link import TimViec365ELe
 from Create_Summarization import GeminiSummarizer, API_KEY, SITE_NAME
 from dotenv import load_dotenv
