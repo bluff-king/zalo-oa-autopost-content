@@ -302,11 +302,9 @@ class AddCTA():
         except Exception as e:
             print(f"‼ Lỗi trong quy trình add_link_cta: {e}")
         finally:
-            # Giữ browser mở để kiểm tra
-            input("👉 Nhấn Enter để thoát và đóng trình duyệt...")
+            # Tự động đóng trình duyệt sau khi hoàn tất
+            print("ℹ️ Tự động đóng trình duyệt.")
             self.driver.quit()
-        input("👉 Nhấn Enter để thoát và đóng trình duyệt...")
-        self.driver.quit()
     
 def run_pipeline():
     URL_POST, URL_IMG, LOCAL_IMAGE_PATH, FILE_CONTENT, STATUS, ACCESS_TOKEN, scraper = prepare_post_data()

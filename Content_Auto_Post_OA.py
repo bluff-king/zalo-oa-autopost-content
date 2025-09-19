@@ -9,16 +9,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 KEY_ENV_PATH = os.path.join(BASE_DIR, "key.env")
 OUTPUT_DOC_DIR = os.path.join(BASE_DIR, "OutputDoc")
 FINAL_RESULT_PATH = os.path.join(OUTPUT_DOC_DIR, "final_result.txt")
-ACCESS_TOKEN_PATH = os.path.join(BASE_DIR, "access_token.txt")
 
 # Ensure OutputDoc directory exists
 os.makedirs(OUTPUT_DOC_DIR, exist_ok=True)
 
-if not os.path.exists(ACCESS_TOKEN_PATH):
-    raise FileNotFoundError(f"Không tìm thấy file: {ACCESS_TOKEN_PATH}")
-
-with open(ACCESS_TOKEN_PATH, "r", encoding="utf-8") as f:
-    ACCESS_TOKEN = f.read().strip()
+load_dotenv(KEY_ENV_PATH)
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+if not ACCESS_TOKEN:
+    raise ValueError("Không tìm thấy ACCESS_TOKEN trong key.env")
 
 URL = "https://openapi.zalo.me/v2.0/article/create"
 URL_IMG = ""
