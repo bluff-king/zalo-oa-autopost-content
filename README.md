@@ -4,10 +4,8 @@ This project focuses on automatically scrape text from original link,
 ## Introduction
 
 ## DEMO
-![Demo Image](.png)
 <img width="1918" height="848" alt="image" src="https://github.com/user-attachments/assets/58d12bbd-95c6-4466-952a-157cc9a72e87" /># Zalo-OA
 
-![Demo Image](.png)
 <img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/1afd4f79-637e-45bd-9c65-c3ef7df2e9c2" />
 
 ## Requirements
@@ -45,8 +43,11 @@ To set up and run the project, follow these steps:
 
 6.  **Run the Flask application:**
     ```bash
-    python3
-    
+    python CTA_post_main.py
+    python Add_Link_Input_Post_OA.py
+    python Scheduler.py
+    or using start.bat instead
+
     ```
 ## License
 
