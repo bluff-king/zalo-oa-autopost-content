@@ -1,0 +1,29 @@
+Zalo OA
+1. “Có sẵn 2.000 tin Tư vấn ngoài khung” 
+Đây là 2.000 tin nhắn chủ động ngoài “khung 24h” mỗi tháng mà Zalo OA được phép gửi đến người dùng.
+Chi tiết:
+- Bình thường, OA của bạn chỉ có thể trả lời UV trong vòng 24h - kể từ khi họ nhắn tin trước (Zalo quy định vậy).
+- Nhưng với gói này, bạn được gửi chủ động 2.000 tin nhắn/tháng đến những người đã từng nhắn ngoài khung 24h quy định đó. 
+- Loại tin này thường dùng để chăm sóc lại khách cũ, mời quay lại tạo CV, nhắc nhở cập nhật hồ sơ, ... 
+2. “Khách hàng nhận 4 tin Truyền thông/tháng”
+Bạn được phép gửi 4 tin hàng loạt đến tất cả người đã quan tâm OA mỗi tháng.
+Chi tiết:
+- Đây là tính năng giống như gửi email marketing nhưng  sẽ là gửi trên Zalo.
+- Bạn có thể gửi tin tức, khuyến mãi, bài blog, mẹo CV… đến tất cả người quan tâm OA, tối đa 4 lần mỗi tháng.
+- Tin truyền thông có thể kèm hình ảnh, nút CTA, ... giúp kéo người dùng quay lại tương tác.
+3. “15 lượt xuất bản nội dung”
+Cho phép bạn đăng 15 bài viết/tháng lên Zalo OA (giao diện giống như blog hoặc Facebook post).
+Chi tiết:
+- Mỗi “lượt xuất bản” là một bài viết nội dung dài, có tiêu đề, ảnh, mô tả.
+- Bạn có thể dùng tính năng này để:
+    • Chia sẻ mẹo tìm việc, CV
+    • Cập nhật xu hướng ngành nghề
+    • Giới thiệu dịch vụ nền tảng (Timviec365.vn, tạo CV, hồ sơ năng lực...)
+- Các bài viết sẽ hiện trên tab “Bài viết” của OA và có thể được phân phối đến người quan tâm.
+
+Note cho anh Đức/ bạn tts mới:
+- Link cào từ những bài mới nhất trên timviec365.vn (bằng file Crawl_Link_Blog.py)
+- Nội dung đang là bản tóm tắt của nội dung bài blog gốc. Nhưng theo yêu cầu mới nhất
+ thì chị P muốn đơn giản hơn, xem chi tiết trên web OA ZALO bài chị P đăng
+- Các bước tự động còn lại (dán bài đăng, thêm cover image, thêm CTA đều được thực hiện ở Content_Auto_Post_OA.py)
+Tuy nhiên chưa kiểm chứng được nó có bắt được file access_token thay đôi mỗi ngày không
