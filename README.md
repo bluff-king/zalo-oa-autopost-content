@@ -1,14 +1,14 @@
-# Zalo-OA
-This project focuses on 
+
+This project focuses on automatically scrape text from original link, 
 
 ## Introduction
 
 ## DEMO
 ![Demo Image](.png)
-#### Lorem ipsum
+<img width="1918" height="848" alt="image" src="https://github.com/user-attachments/assets/58d12bbd-95c6-4466-952a-157cc9a72e87" /># Zalo-OA
 
 ![Demo Image](.png)
-#### Lorem ipsum
+<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/1afd4f79-637e-45bd-9c65-c3ef7df2e9c2" />
 
 ## Requirements
 
@@ -34,18 +34,19 @@ To set up and run the project, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
+    Install ZaloSession Folder
 
-4.  **Set up your API key:**
+5.  **Set up your API key:**
     Create a file named `key.env` in the project root and add your OpenRouter API key:
     ```
-    OPENROUTER_API_KEY=your_openrouter_api_key_here
+    GEMINI_API_KEY=your_gemini_api_key_here
     ```
-    Replace `your_openrouter_api_key_here` with your actual API key.
+    Replace `your_gemini_api_key_here` with your actual API key.
 
-5.  **Run the Flask application:**
+6.  **Run the Flask application:**
     ```bash
-    python3 
-    infer.py
+    python3
+    
     ```
 ## License
 
