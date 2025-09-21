@@ -2,21 +2,23 @@ import os
 import requests
 from Crawl_Text_From_Link import TimViec365ELe
 from Create_Summarization import GeminiSummarizer, API_KEY, SITE_NAME
-from dotenv import load_dotenv
-
 # --- Path Configurations ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-KEY_ENV_PATH = os.path.join(BASE_DIR, "key.env")
+ACCESS_TOKEN_PATH = os.path.join(BASE_DIR, "access_token.txt")
 OUTPUT_DOC_DIR = os.path.join(BASE_DIR, "OutputDoc")
 FINAL_RESULT_PATH = os.path.join(OUTPUT_DOC_DIR, "final_result.txt")
 
 # Ensure OutputDoc directory exists
 os.makedirs(OUTPUT_DOC_DIR, exist_ok=True)
 
-load_dotenv(KEY_ENV_PATH)
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+# Load ACCESS_TOKEN from access_token.txt
+try:
+    with open(ACCESS_TOKEN_PATH, "r", encoding="utf-8") as f:
+        ACCESS_TOKEN = f.read().strip()
+except FileNotFoundError:
+    raise ValueError(f"Không tìm thấy file access_token.txt tại {ACCESS_TOKEN_PATH}")
 if not ACCESS_TOKEN:
-    raise ValueError("Không tìm thấy ACCESS_TOKEN trong key.env")
+    raise ValueError("ACCESS_TOKEN không được tìm thấy trong access_token.txt")
 
 URL = "https://openapi.zalo.me/v2.0/article/create"
 URL_IMG = ""
